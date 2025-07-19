@@ -127,8 +127,6 @@ ASSET(EXAMPLE_pathjerryio_txt); // '.' replaced with "_" to make c++ happy
 
 /**
  * Runs during auto
- *
- * This is an example autonomous routine which demonstrates a lot of the features LemLib has to offer
  */
 void autonomous() {
     
