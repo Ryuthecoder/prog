@@ -123,7 +123,6 @@ void disabled() {}
 void competition_initialize() {}
 
 // get a path used for pure pursuit
-// this needs to be put outside a function
 ASSET(EXAMPLE_pathjerryio_txt); // '.' replaced with "_" to make c++ happy
 
 /**
