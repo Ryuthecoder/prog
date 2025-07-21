@@ -187,8 +187,14 @@ void opcontrol() {
         int rightX = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
         // move the chassis with curvature drive
         chassis.arcade(leftY, rightX);
-        // delay to save resources
-        pros::delay(10);
+        
+        /**if (leftY == 0 && rightX == 0) {
+            // if the joystick is not moving, stop the chassis
+            chassis.setBrakeMode();
+        } else {
+            // otherwise, move the chassis
+            chassis.arcade(leftY, rightX);
+        }*/
 
         chassis.arcade(leftY, rightX); 
 
@@ -196,5 +202,7 @@ void opcontrol() {
 
         holdIntake((controller.get_digital(DIGITAL_R1) - controller.get_digital(DIGITAL_R2)) * 127);
         
+        pros::delay(10);
+
     }
 }
