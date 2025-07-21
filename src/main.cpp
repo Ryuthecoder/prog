@@ -1,14 +1,23 @@
 #include "main.h"
 #include "lemlib/api.hpp" 
 #include "lemlib/chassis/trackingWheel.hpp"
+#include "pros/adi.h"
+#include "pros/misc.h"
 
 // controller 
-pros::Controller controller(pros::E_CONTROLLER_MASTER);
+//pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 // MotorGroup
 pros::MotorGroup leftMotors({-5, 4, -3},
                             pros::MotorGearset::blue); 
 pros::MotorGroup rightMotors({6, -9, 7}, pros::MotorGearset::blue); 
+
+//pneumatics
+/*pros::adi::Pneumatics hood('a', false); //hood
+
+pros::adi::Pneumatics littlewill('b', false); //little will mech */
+
+
 
 // Inertial Sensor port number 
 pros::Imu imu(7);
@@ -166,7 +175,11 @@ void autonomous() {
  */
 void opcontrol() {
     // controller
+    
     // loop to continuously update motors
+
+    
+
     while (true) {
         // get joystick positions
         int leftY = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
@@ -175,5 +188,8 @@ void opcontrol() {
         chassis.arcade(leftY, rightX);
         // delay to save resources
         pros::delay(10);
+
+        toggleHood(); // toggle hood with button A
+        
     }
 }

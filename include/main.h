@@ -70,7 +70,12 @@ void opcontrol(void);
 }
 #endif
 
+
 #ifdef __cplusplus
+
+#include "globals.hpp"
+#include "pneumatics.hpp"
+
 /**
  * You can add C++-only headers here
  */
