@@ -192,7 +192,7 @@ void opcontrol() {
 
         toggleHood(); // toggle hood with button A
 
-        holdIntake((controller.get_digital(DIGITAL_R1) - controller.get_digital(DIGITAL_R2)) * 127);
+        holdIntake((controller.get_digital(DIGITAL_R1) - controller.get_digital(DIGITAL_R2)) * 127); 
         
     }
 }
