@@ -133,14 +133,14 @@ void disabled() {}
 void competition_initialize() {}
 
 // get a path used for pure pursuit
-ASSET(EXAMPLE_pathjerryio_txt); // '.' replaced with "_" to make c++ happy
+ASSET(PLACEHOLDER_pathjerryio_txt); // '.' replaced with "_" to make c++ happy
 
 /**
  * Runs during auto
  */
 void autonomous() {
     
-	chassis.follow(EXAMPLE_pathjerryio_txt, 20, 11000);
+	chassis.follow(PLACEHOLDER_pathjerryio_txt, 20, 11000);
 	/*// Move to x: 20 and y: 15, and face heading 90. Timeout set to 4000 ms
     chassis.moveToPose(20, 15, 90, 4000);
     // Move to x: 0 and y: 0 and face heading 270, going backwards. Timeout set to 4000ms
@@ -198,7 +198,7 @@ void opcontrol() {
 
         chassis.arcade(leftY, rightX); 
 
-        toggleHood(); // toggle hood with button A
+        toggleHood();
 
         holdIntake((controller.get_digital(DIGITAL_R1) - controller.get_digital(DIGITAL_R2)) * 127);
         
