@@ -3,7 +3,7 @@
 #include "lemlib/chassis/trackingWheel.hpp"
 #include "pros/adi.h"
 #include "pros/misc.h"
-
+ 
 
 // controller 
 //pros::Controller controller(pros::E_CONTROLLER_MASTER);
@@ -189,6 +189,8 @@ void opcontrol() {
         chassis.arcade(leftY, rightX);
         // delay to save resources
         pros::delay(10);
+
+        chassis.arcade(leftY, rightX); 
 
         toggleHood(); // toggle hood with button A
 

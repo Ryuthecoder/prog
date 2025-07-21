@@ -9,4 +9,6 @@ extern pros::MotorGroup intake;
 
 extern pros::Controller controller; 
 
+extern int leftY;
+extern int rightX;
 
