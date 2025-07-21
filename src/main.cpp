@@ -4,6 +4,7 @@
 #include "pros/adi.h"
 #include "pros/misc.h"
 
+
 // controller 
 //pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
@@ -190,6 +191,8 @@ void opcontrol() {
         pros::delay(10);
 
         toggleHood(); // toggle hood with button A
+
+        holdIntake((controller.get_digital(DIGITAL_R1) - controller.get_digital(DIGITAL_R2)) * 127);
         
     }
 }

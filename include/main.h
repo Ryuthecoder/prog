@@ -74,7 +74,8 @@ void opcontrol(void);
 #ifdef __cplusplus
 
 #include "globals.hpp"
-#include "pneumatics.hpp"
+#include "subsystems/pneumatics.hpp"
+#include "subsystems/intake.hpp"
 
 /**
  * You can add C++-only headers here
