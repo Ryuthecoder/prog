@@ -144,7 +144,7 @@ void autonomous() {
 // driver control
 void opcontrol() {
     // controller 
-    
+    pros::Controller controller(pros::E_CONTROLLER_MASTER);
     // loop to continuously update motors im still exploring options
 
     
@@ -164,7 +164,7 @@ void opcontrol() {
             chassis.arcade(leftY, rightX);
         }*/
 
-        chassis.arcade(leftY, rightX); 
+        chassis.arcade(leftY, rightX,false,0.75); 
 
         toggleHood();
 
