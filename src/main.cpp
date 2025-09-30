@@ -155,7 +155,7 @@ void opcontrol() {
         int rightX = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
         
         
-        /**if (leftY == 0 && rightX == 0) {
+        /*if (leftY == 0 && rightX == 0) {
             // if the joystick is not moving, stop the chassis
             chassis.setBrakeMode();
         } else {
