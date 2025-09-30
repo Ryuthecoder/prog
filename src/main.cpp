@@ -163,7 +163,7 @@ void opcontrol() {
             chassis.arcade(leftY, rightX);
         }*/
 
-        chassis.arcade(leftY, rightX,false,0.75); 
+        chassis.arcade(leftY, rightX,false,0.5); 
 
         toggleHood();
 
