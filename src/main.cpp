@@ -36,10 +36,10 @@ lemlib::TrackingWheel vertical(&verticalEnc, lemlib::Omniwheel::NEW_2, 0);
 // drivetrain settings
 lemlib::Drivetrain drivetrain(&leftMotors, // left motor group
                               &rightMotors, // right motor group
-                              1, // ? inch track width figure out 
+                              14.5, // ? inch track width figure out 
                               lemlib::Omniwheel::NEW_275, 
                               450, // drivetrain rpm
-                              2 // horizontal drift (figure out)
+                              8 // horizontal drift (figure out)
 );
 
 // lateral motion controller 
