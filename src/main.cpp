@@ -154,7 +154,6 @@ void opcontrol() {
         int leftY = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
         int rightX = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
         
-        chassis.arcade(leftY, rightX);
         
         /**if (leftY == 0 && rightX == 0) {
             // if the joystick is not moving, stop the chassis
